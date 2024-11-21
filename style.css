@@ -1,0 +1,293 @@
+
+/*sets box-sizing, margin, padding, which makes sure to have same layout across different browsers. Font-family is default for the page*/
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+height: adjusts height of hero section
+width: adjusts width of hero section
+bg-color: sets the bg color of the section 
+
+*/
+.hero{
+    height:7%;
+    width:100%;
+    background-color: pink;
+
+}
+
+/*
+allows easy alignment and distribution of elements
+aligns the element in the center of flex container
+distributes the elements evenly
+gives spaces top, right
+*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+}
+
+/*setting the font color and font size*/
+.logo{
+    color:white;
+    font-size: 28px;
+}
+/*part of the name color is changed to black*/
+span{
+    color:black;
+
+}
+
+/*as the list is unordered the bullets are removed
+creates boxes automatically wrap text and other content to give them space
+give spaces top right*/
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px; 
+}
+/*sets the color of list in nav bar
+removes text decorations if any
+sets weight of font to bold
+*/
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/*changes the list color to red when hovered
+applies effect with duration of .3s*/
+nav ul li a:hover{
+    color: red;
+    transition: .3s;
+}
+
+/*allows easy alignment and distribution of elements
+aligns in the center of the flex container
+give spaces top,right
+*/
+
+.search-container{
+    display:flex;
+    justify-content:center;
+    padding:20px 10%;
+}
+
+/*sets width 
+sets maximum width
+allows easy alignment and distribution of elements
+aligns the element in the center of flex container
+sets padding for all side
+sets the radius of cornner of the borders
+set bg color
+applies transition effect to thebg property with the given duration
+*/
+.search{
+    width:60%;
+    max-width:500px;
+    display:flex;
+    align-items:center;
+    padding:14px;
+    border-radius:28px;
+    background:#f6f6f6;
+    transition:background 0.25s;
+}
+
+/*sets bg color*/
+.search:focus-within{
+    background:#f1f1f1;
+}
+/*specifies that the element should shrink to fill the available space
+sets font size
+font family used
+sets color of input text
+hides the outline of the input tag
+removes border
+sets the background transparent
+*/
+.search-input{
+    flex:1;
+    font-size:25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#333333;
+    margin-left:14px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+/*color of placeholder and logo of search*/
+.search-input::placeholder,
+.search-icon{
+    color:rgba(0,0,0,0.25)
+}
+
+/*sets margin of the element 0
+removes any spaces around
+includes padding and border in the elements total width and height
+sets font family
+allows easy alignment and distribution of elements
+aligns in the center of the flex container
+aligns the item in center
+sets minimum height
+sets position to normal position according to the flow of page
+
+*/
+
+.container{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    position: relative;
+}
+/*sets image width
+sets image height
+the radius of corner of border
+border thickness
+margin with right side*/
+.container img{
+    width:250px;
+    height:250px;
+    border-radius:10px;
+    border:3px solid white;
+    margin-right:20px;
+}
+/*max width of text*/
+.text{
+    max-width:50%;
+}
+/*title size
+padding around*/
+.text h2{
+    font-size:50px;
+    padding:5px;
+}
+/*font size of description*/
+.text p {
+    font-size:18px;
+}
+
+/* background for products sections
+positions the element absolutely within its containing element
+set the position of element at the top
+set the position of element at the left
+sets width 
+sets height
+stack order of the element
+*/
+
+.container .bg {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+}
+
+/*setting the background color for the products */
+
+.containerone .bg{
+    background-color: #c4e3f3;
+}
+
+.containertwo .bg{
+    background-color: #f7dadb;
+}
+
+.containerthree .bg{
+    background-color: #f7f7f7;
+}
+
+.containerfour .bg{
+    background-color: #e2f0d6;
+}
+
+.containerfive .bg{
+    background-color: #e6e6e6;
+}
+
+/* order button style */
+/*creates boxes automatically wrap text and other content to give them space
+padding top, right
+sets bg color
+removes text decorations if any
+radius of the corner of the border
+sets margin on top
+transition with duration 0.3s
+*/
+.btn{
+    display:inline-block;
+    padding: 10px 20px;
+    background-color: #ea1538;
+    color:white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top:20px;
+    transition: background 0.3s;
+}
+/*changes the color when hovered on the button*/
+.btn:hover {
+    background-color: #ff4d6b;
+}
+
+/*aligns the text
+padding top,right
+*/
+.partnered-brands {
+    text-align: center;
+    padding:50px 0;
+
+}
+
+/*sets font size
+sets margin on bottom
+*/
+.partnered-brands h2{
+    font-size: 45px;
+    margin-bottom: 20px;   
+}
+/*
+allows easy alignment and distribution of elements
+distributes the element with equal spaces around
+*/
+.partnered-brands-container{
+    display:flex;
+    justify-content: space-around;
+}
+/*sets width*/
+.partner{
+    width: 25%;
+}
+/*sets width
+sets automatically according to the content
+sets the border radius
+indicates the image is clickable*/
+.partner img{
+    width: 80%;
+    height:auto;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+/*footer style*/
+footer{
+    clear:both;
+    background-color:rgb(244, 136, 154);
+    padding:20px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+}
