@@ -18,7 +18,8 @@ bg-color: sets the bg color of the section
     height:7%;
     width:100%;
     background-color: pink;
-
+    display: flex;
+    align-items: center;
 }
 
 /*
